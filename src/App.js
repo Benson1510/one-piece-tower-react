@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// src/components/Navbar.js
 
-function App() {
+import React, { useState } from 'react';
+
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Fonction pour gérer l'ouverture/fermeture du menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <a href="/">Mon Logo</a>
+      </div>
+      <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/about">À propos</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div className="navbar-toggle" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+    </nav>
   );
-}
+};
 
-export default App;
+export default Navbar;
