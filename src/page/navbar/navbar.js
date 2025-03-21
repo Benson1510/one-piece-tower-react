@@ -9,7 +9,7 @@ const NavItems = [
 
 const Navbar = () => {
     return (
-        <div className="fluid-container">
+        <div className="container-fluid">
             <div className="row" id="menu">
                 {NavItems.map(({ id, label }) => (
                     <div className="col" key={id}>

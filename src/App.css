@@ -1,7 +1,14 @@
-#menu a:nth-child(3){
+#menu > div:nth-child(3){
     text-align: right
+    
 }
+#menu > div:nth-child(2){
+    text-align: center
+}
+body {
+    background-color: rgb(194, 136, 11);
+    background-size: cover;
+    background-image: url(../public/img/fond.jpg)
+    
 
-body{
-    background-color: black;
 }
