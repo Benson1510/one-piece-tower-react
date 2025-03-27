@@ -1,24 +1,19 @@
-import React from "react"
+import React from "react";
 
-function Home (){
-    return (
-        <>
-           <div id="HautDePage">
-              <h1></h1>
-              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-           </div>
-           <div id="reservation">
-              <h1></h1>
-              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          </div>
-          <div id="contact">
-             <h1></h1>
-             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          </div>
-       </>
-
-    )
+function Home() {
+   return (
+      <main>
+         <section id="HautDePage" className="page-section">
+            <h1>Haut de page</h1>
+         </section>
+         <section id="reservation" className="page-section">
+            <h1>Réservation</h1>
+         </section>
+         <section id="contact" className="page-section">
+            <h1>Contact</h1>
+         </section>
+      </main>
+   );
 }
 
 export default Home;
-

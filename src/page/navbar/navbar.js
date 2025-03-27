@@ -1,31 +1,28 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const NavItems = [
-    { id: 'HautDePage', label: <img src="./img/tokyo-tower.png" alt="" width="50" height="50" /> },
-    { id: 'reservation', label: 'Réservation' },
-    { id: 'contact', label: 'Contact' },
-];
-
 const Navbar = () => {
     return (
-        <div className="container-fluid">
-            <div className="row" id="menu">
-                {NavItems.map(({ id, label }) => (
-                    <div className="col" key={id}>
-                        <Link
-                            to={id}
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                        >
-                            {label}
-                        </Link>
-                    </div>
-                ))}
+        <nav className="navbar bg-body-tertiary">
+            <div className="container-fluid">
+                {/* Logo à gauche */}
+                <Link to="HautDePage" className="navbar-brand">
+                    <img  src="./img/tokyo-tower.png"  alt="Logo"  width="30"  height="30" />
+                </Link>
+                
+                {/* Conteneur flex pour centrer */}
+                <div className="d-flex flex-grow-1 justify-content-center">
+                    <Link to="reservation" className="nav-link" >
+                        Réservation
+                    </Link>
+                </div>
+                
+                {/* Contact à droite */}
+                <Link to="contact" className="nav-link">
+                    Contact
+                </Link>
             </div>
-        </div>
+        </nav>
     );
 }
 
